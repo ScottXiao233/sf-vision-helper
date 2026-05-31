@@ -4,20 +4,6 @@ Claude Code skill and hooks that let a non-vision model such as DeepSeek inspect
 
 The default model is `Qwen/Qwen3-VL-8B-Instruct`, and the default API base URL is `https://api.siliconflow.cn/v1`.
 
-## 中文注意事项
-
-这个项目可以公开，但你的 API key 绝对不能公开。不要把 `~/.claude/private/sf-vision.env`、`.env`、Claude 会话记录、截图里的完整 key、终端历史里的完整 key 上传到 GitHub。
-
-硅基流动 API 密钥页面通常只显示一次完整密钥。列表里看到的 `sk-b********gknn` 是脱敏后的展示，不是完整 key；如果只复制到脱敏文本，请重新创建一个 API key 并复制完整值。
-
-国内硅基流动控制台对应的默认接口是 `https://api.siliconflow.cn/v1`。如果误用 `https://api.siliconflow.com/v1`，可能会出现 `401 Api key is invalid`。
-
-自动调用图片识别依赖 Claude Code hooks 给模型追加提示，不是强制拦截所有图片。模型偶尔不主动调用时，手动输入 `/sf-vision 图片中讲了什么` 是最稳的兜底方式。
-
-`--latest-claude-image` 会从当前 Claude Code 项目的 JSONL 会话记录中读取最近上传的图片。这个功能方便，但也意味着 Claude 本地会话记录可能含有图片内容，不要把 `~/.claude/projects` 上传到公开仓库。
-
-Cowork 和 Code 模式的 skill 加载路径可能不同。本仓库主要面向 Claude Code 的标准 `~/.claude/skills` 安装路径；Cowork 如果看不到 skill，需要通过 Cowork 的插件/skill 机制额外注册。
-
 ## What It Does
 
 - Adds a Claude Code skill named `sf-vision`.
