@@ -1,0 +1,4 @@
+interface:
+  display_name: "SiliconFlow Vision"
+  short_description: "Use SiliconFlow VLMs to understand local or remote images."
+  default_prompt: "Use SiliconFlow Vision to inspect this image."

@@ -1,0 +1,11 @@
+.DS_Store
+node_modules/
+npm-debug.log*
+
+# Never commit local Claude state or secrets.
+.claude/
+*.env
+sf-vision.env
+
+# Local test output.
+coverage/
